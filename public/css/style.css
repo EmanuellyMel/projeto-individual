@@ -15,7 +15,7 @@
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  background-image: url("/img/imgFundo.png");
+  background-image: url("../assets/imgs/imgFundo.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
