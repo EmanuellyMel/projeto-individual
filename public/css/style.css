@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --font-principal: "Inter", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-principal);
+}
+
+.imgFundo {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("/img/imgFundo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  min-height: 6vh;
+  width: 50%;
+  background-color: #684b37;
+  z-index: 99;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.header ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80%;
+  width: 50%;
+  background-color: #684b37;
+  list-style: none;
+}
+
+.header ul li a{
+  font-size: 22px;
+  font-weight: 400px;
+  color: white;
+  text-decoration: none
+}
+
+.tituloSinopse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 8vh;
+  width: 20vw;
+  left: 29px;
+  bottom: 0;
+  background-color: #684b37;
+  border-radius: 15px 15px 0px 0;
+}
+
+.tituloSinopse p {
+  color: white;
+  font-weight: 400;
+  font-size: 22px;
+  font-family: var(--font-principal);
+}
+
+.sinopse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  background-color: #684b37;
+}
+
+.sinopse p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10%;
+  color: white;
+  font-size: 30px;
+}
+
+.tituloPersonagens {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 20vw;
+  left: 29px;
+  bottom: 0;
+  position: absolute;
+  background-color: #bc9c80;
+  border-radius: 15px 15px 0px 0;
+  font-family: var(--font-principal);
+}
+
+.tituloPersonagens p {
+  color: white;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.personagens {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 90vh;
+  background-color: #bc9c80;
+  position: relative;
+}
+
+.box {
+  width: 30%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box img {
+  width: 50%;
+  transition: 0.5s;
+}
+
+.box img:hover {
+  width: 60%;
+}
+
+.box p {
+  text-align: justify;
+  color: #423023;
+  font-size: 19px;
+  width: 70%;
+}
+
+.box h3 {
+  font-size: 25px;
+  color: #423023;
+}
+
+.pastas {
+  position: relative;
+}
+
+.abertura1 {
+  height: 7vh;
+  width: 20vw;
+  left: 29px;
+  bottom: 0;
+  position: absolute;
+  background-color: #cab276;
+  border-radius: 15px 15px 0px 0;
+}
+
+.fechamentoDaPasta1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6vh;
+  width: 100%;
+  background-color: #cab276;
+}
+
+.abertura2 {
+  height: 8vh;
+  width: 20vw;
+  right: 29px;
+  bottom: 66%;
+  position: absolute;
+  background-color: #ebd1ba;
+  border-radius: 15px 15px 0px 0;
+}
+
+.fechamentoDaPasta2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6vh;
+  width: 100%;
+  background-color: #ebd1ba;
+}
+
+.tituloRelacoes {
+  height: 8vh;
+  width: 20vw;
+  left: 29px;
+  bottom: 33%;
+  position: absolute;
+  background-color: #8d6555;
+  border-radius: 15px 15px 0px 0;
+}
+
+.fechamentoDaPasta3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6vh;
+  width: 100%;
+  background-color: #8d6555;
+}
+
+.tituloRelacoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+}
+
+.relacoes {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f2eb;
+  position: relative;
+}
+
+.relacionamentos {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  align-items: center;
+}
+
+.relacionamentos img  {
+  margin-top: 8%;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.textos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-align: justify;
+  color: #423023;
+  font-size: 19px;
+  width: 40%;
+  margin: 4%;
+  margin-top: 10%;
+}
+
+.textos h3 {
+  display: flex;
+  margin-bottom: 3%;
+  width: 100%;
+}
+
+.Direita {
+  flex-direction: row-reverse;
+}
+
+.Direita img{
+  border-radius: 30px 0px 0px 30px;
+}
+
+.fechamentoDaPastaRelacionamentos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6vh;
+  width: 100%;
+  background-color: #8D6555;
+}
+
+.curiosidadesTitulo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 20vw;
+  left: 29px;
+  bottom:0 ;
+  position: absolute;
+  background-color: #B59A82;
+  border-radius: 15px 15px 0px 0;
+  font-family: var(--font-principal);
+}
+
+.curiosidadesTitulo p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+}
+
+.fechamentoCuriosidades{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6vh;
+  width: 100%;
+  background-color: #B59A82;
+}
+
+.topicos{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: #f7f2eb;
+  align-items: center;  
+}
+.pontos{
+  height: 25px;
+  width: 25px;
+  background-color: #B59A82;
+  margin-left: 10%;
+  border-radius: 50%;
+  display: flex;
+}
+
+.topicos p{
+  justify-content: space-around;
+  margin: 5vh;
+}
+
+.Curiosidadesfinal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6vh;
+  width: 100%;
+  background-color: #B59A82; 
+}
+
+.abaFooter{
+  height: 100px;
+  width: 20vw;
+  left: 29px;
+  position: absolute;
+  background-color: #684B37;
+  border-radius: 15px 15px 0px 0;
+}
+
+.footer{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 25vh;
+  width: 100%;
+  background-color: #684B37;
+}
+
+.footer p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+}
