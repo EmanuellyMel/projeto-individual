@@ -10,6 +10,17 @@
   font-family: var(--font-principal);
 }
 
+.imgFundo{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 .container {
   display: flex;
   width: 100%;
@@ -22,8 +33,7 @@
   align-items: center;
   position: fixed;
   width: 50%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
   min-height: 6vh;
   background-color: #684b37;
   z-index: 99;
@@ -75,7 +85,7 @@
 .banner {
   height: var(--tamanho-banner);
   color: white;
-  background-image: url('/img/fundoOutros.png');
+  background-image: url('../assets/imgs/fundoOutros.png');
   background-size: cover;
   
 }
@@ -138,7 +148,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/img/fundoOutros.png');
+  background-image: url('../assets/imgs/fundoOutros.png');
   background-size: cover;
 }
 
@@ -151,7 +161,7 @@
 .card {
   width: 50%;
   height: 70%;
-  background-color: #F7F2EB;
+  background-color: #FAF8ED;
   border-radius: 40px;
   display: flex;
   align-items: center;
