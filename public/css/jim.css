@@ -132,10 +132,15 @@
   background-color: #FAF8ED;
 }
 
-.centralizacao{
-  width: 80%; 
+.centralizacaoJim{
+  width: 50%; 
   margin: auto;
   margin-bottom: 6%;
+}
+
+.centralizacaoProf{
+  width: 50%; 
+  margin: auto;
 }
 
 .textos h3{
@@ -165,7 +170,7 @@
   height: 6vh;
   width: 100%;
   background-color: #BC9C80;  
-  position: absolute;
+  position: relative;
 }
 
 .preFooter{
