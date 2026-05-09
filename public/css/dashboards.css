@@ -95,7 +95,7 @@ body {
 }
 
 .div-results .feed-container {
-  background-color: #212124;
+  background-color: hwb(240 55% 11%);
   border-radius: 5px;
   margin-bottom: 80px;
 }
@@ -120,7 +120,7 @@ body {
   position: relative;
   top: 0;
   left: 20%;
-  background-color: #161618;
+  background-color: #FAF8ED;
   height: 100vh;
   overflow: auto;
 }
@@ -132,12 +132,13 @@ body {
   width: 70%;
   margin: auto;
   margin-top: 10px;
-  background-color: #212124;
+  background-color: #684B37;
+  border-radius: 10px;
 }
 
 .area-parametros-alerta .titulo-legenda {
   color: white;
-  font-weight: 600;
+  font-weight: 550;
   width: fit-content;
   margin: 10px 20px;
 }
@@ -167,23 +168,28 @@ body {
 }
 
 .perigo-frio {
-  background-color: #5c6bc0;
+  background-color: #C9D5EE;
+  color: #3b4b6d;
 }
 
 .perigo-quente {
-  background-color: #ff7043;
+  background-color: #733D37;
+  color: #2e1210;
 }
 
 .alerta-frio {
-  background-color: #42a5f5;
+  background-color: #DBC38C;
+  color: #614e21;
 }
 
 .alerta-quente {
-  background-color: #ffee58;
+  background-color: #B6CCA7;
+  color: #3e572d;
 }
 
 .ideal {
-  background-color: #9ccc65;
+  background-color: #774B5E;
+  color: #341b26;
 }
 
 .cards {
