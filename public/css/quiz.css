@@ -354,15 +354,16 @@ fieldset {
   align-items: center;
 }
 
-.enviar {
+.enviar button {
   height: 50px;
-  width: 15%;
+  width: 250%;
   background-color: #a48a73;
   color: white;
   font-size: 20px;
   font-weight: bold;
   border: 2px solid #7e634b;
   border-radius: 13px;
+  cursor: pointer;
 }
 
 .preFooter {

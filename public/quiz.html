@@ -327,73 +327,142 @@
 
 </html>
 <script>
-function validarFormulario() {
-    let Questoes = ["alt1", "alt2", "alt3", "alt4", "alt5"];
-    let respostas = {};
-    let pontosM = 0, pontosD = 0, pontosP = 0, pontosJ = 0, pontosMer = 0;
+    function validarFormulario() {
+        let Questoes = ["alt1", "alt2", "alt3", "alt4", "alt5"];
+        let respostas = {};
+        let pontosM = 0, pontosD = 0, pontosP = 0, pontosJ = 0, pontosMer = 0;
 
-    // 1. Coleta das respostas (Mantendo sua lógica original)
-    for (let i = 0; i < Questoes.length; i++) {
-        let nomeAtual = Questoes[i];
-        let radios = document.getElementsByName(nomeAtual);
-        let selecionado = false;
+        for (let i = 0; i < Questoes.length; i++) {
+            let nomeAtual = Questoes[i];
+            let radios = document.getElementsByName(nomeAtual);
+            let selecionado = false;
 
-        for (let j = 0; j < radios.length; j++) {
-            if (radios[j].checked) {
-                // GUARDAR O VALUE É ESSENCIAL PARA A COMPARAÇÃO ABAIXO
-                respostas[nomeAtual] = radios[j].id; 
-                selecionado = true;
-                break;
+            for (let j = 0; j < radios.length; j++) {
+                if (radios[j].checked) {
+           
+                    respostas[nomeAtual] = radios[j].id;
+                    selecionado = true;
+                    break;
+                }
+            }
+
+            if (!selecionado) {
+                alert("Você esqueceu de responder a " + nomeAtual);
+                return;
             }
         }
 
-        if (!selecionado) {
-            alert("Você esqueceu de responder a " + nomeAtual);
-            return;
+        let chaves = Object.keys(respostas);
+        for (let i = 0; i < chaves.length; i++) {
+            let nomeDaChave = chaves[i];
+            let valorDaResposta = respostas[nomeDaChave]; 
+
+            if (valorDaResposta == "a") {
+                pontosM++;
+            } else if (valorDaResposta == "b") {
+                pontosD++;
+            } else if (valorDaResposta == "c") {
+                pontosP++;
+            } else if (valorDaResposta == "d") {
+                pontosJ++;
+            } else if (valorDaResposta == "e") {
+                pontosMer++;
+            }
         }
-    }
 
-    // 2. Contar pontos usando FOR I (Precisa do Object.keys)
-    let chaves = Object.keys(respostas); 
-    for (let i = 0; i < chaves.length; i++) {
-        let nomeDaChave = chaves[i]; // "alt1", "alt2"...
-        let valorDaResposta = respostas[nomeDaChave]; // "0", "a", "b"...
+        // 3. Definir quem ganhou (Sem o loop de 5 voltas, basta uma comparação direta)
+        let maiorPont = 0;
+        let maiorNome = "";
 
-        if (valorDaResposta == "a") {
-            pontosM++;
-        } else if (valorDaResposta == "b") {
-            pontosD++;
-        } else if (valorDaResposta == "c") {
-            pontosP++;
-        } else if (valorDaResposta == "d") {
-            pontosJ++;
-        } else if (valorDaResposta == "e") {
-            pontosMer++;
+        let idPerso = null
+        // Sequência de IFs para achar o maior
+        if (pontosM > maiorPont) { maiorPont = pontosM; maiorNome = "Michael"; idPerso = x }
+        if (pontosD > maiorPont) { maiorPont = pontosD; maiorNome = "Dwigth"; idPerso = y }
+        if (pontosP > maiorPont) { maiorPont = pontosP; maiorNome = "Pam"; idPerso = z }
+        if (pontosJ > maiorPont) { maiorPont = pontosJ; maiorNome = "Jim"; idPerso = a }
+        if (pontosMer > maiorPont) { maiorPont = pontosMer; maiorNome = "Mer"; idPerso = b }
+
+        // 4. Redirecionamento com ASPAS (Obrigatório para strings)
+        if (maiorNome == "Michael") {
+            window.location.href = "./resultQMichael.html";
+        } else if (maiorNome == "Dwigth") {
+            window.location.href = "./resultQDwight.html";
+        } else if (maiorNome == "Pam") {
+            window.location.href = "./resultQPam.html";
+        } else if (maiorNome == "Jim") {
+            window.location.href = "./retsultQJim.html";
+        } else if (maiorNome == "Mer") {
+            window.location.href = "./resultQMeredith.html";
         }
+
+        /*======================================*/
+        /* AQUI COMECA O CADASTRO DO QUIZ NO BD*/
+        /*======================================*/
+
+
+        var idUsuarioVar = sessionStorage.getItem('ID_USUARIO')
+        var idPersonagemVar = idPerso;
+        var resposta1Var = respostas[chaves[0]]
+        var resposta2Var = respostas[chaves[1]]
+        var resposta3Var = respostas[chaves[2]]
+        var resposta4Var = respostas[chaves[3]]
+        var resposta5Var = respostas[chaves[4]]
+        
+        // Verificando se há algum campo em branco
+        if (
+            idUsuarioVar == "" ||
+            idPersonagemVar == "" ||
+            resposta1Var == "" ||
+            resposta2Var == "" ||
+            resposta3Var == "" ||
+            resposta4Var == "" ||
+            resposta5Var == "" 
+        ) {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "(Mensagem de erro para todos os campos em branco)";
+
+            finalizarAguardar();
+            return false;
+        } else {
+            setInterval(sumirMensagem, 5000);
+        }
+
+        // Enviando o valor da nova input
+        fetch("/quiz/quizCadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                idUsuarioServer: idUsuarioVar,
+                idPersonagemServer: idPersonagemVar,
+                resposta1Server: resposta1Var,
+                resposta2Server: resposta2Var,
+                resposta3Server: resposta3Var,
+                resposta4Server: resposta4Var,
+                resposta5Server: resposta5Var
+
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    limparFormulario();
+                    finalizarAguardar();
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                finalizarAguardar();
+            });
+
+        return false;
     }
 
-    // 3. Definir quem ganhou (Sem o loop de 5 voltas, basta uma comparação direta)
-    let maiorPont = 0;
-    let maiorNome = "";
-
-    // Sequência de IFs para achar o maior
-    if (pontosM > maiorPont) { maiorPont = pontosM; maiorNome = "Michael"; }
-    if (pontosD > maiorPont) { maiorPont = pontosD; maiorNome = "Dwigth"; }
-    if (pontosP > maiorPont) { maiorPont = pontosP; maiorNome = "Pam"; }
-    if (pontosJ > maiorPont) { maiorPont = pontosJ; maiorNome = "Jim"; }
-    if (pontosMer > maiorPont) { maiorPont = pontosMer; maiorNome = "Mer"; }
-
-    // 4. Redirecionamento com ASPAS (Obrigatório para strings)
-    if (maiorNome == "Michael") {
-        window.location.href = "./resultQMichael.html";
-    } else if (maiorNome == "Dwigth") {
-        window.location.href = "./resultQDwight.html";
-    } else if (maiorNome == "Pam") {
-        window.location.href = "./resultQPam.html";
-    } else if (maiorNome == "Jim") {
-        window.location.href = "./retsultQJim.html";
-    } else if (maiorNome == "Mer") {
-        window.location.href = "./resultQMeredith.html";
-    }
-}
 </script>
