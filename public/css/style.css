@@ -10,6 +10,11 @@
   font-family: var(--font-principal);
 }
 
+html, body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 .imgFundo {
   display: flex;
   justify-content: center;
@@ -20,38 +25,45 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  /* position: relative; */
+}
+
+.header-container {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  position: fixed;
+  top: 0;
 }
 
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  width: 50%;
-  top: 0;
+  width: 600px;
   min-height: 6vh;
   background-color: #684b37;
   z-index: 99;
   border-radius: 0 0 15px 15px;
-
 }
 
 .header ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   height: 80%;
   width: 50%;
   background-color: #684b37;
   list-style: none;
+  gap: 10px;
 }
 
 .header ul li a{
   font-size: 22px;
   font-weight: 400px;
   color: white;
-  text-decoration: none
+  text-decoration: none;
+  
 }
 
 .tituloSinopse {
@@ -120,6 +132,14 @@
   height: 90vh;
   background-color: #bc9c80;
   position: relative;
+}
+
+.personagens i{
+  font-size: bold;
+  font-size: 35px;
+  color: #423023;
+  background-color: #B59A82;
+  border: solid 2px #B59A82;
 }
 
 .box {

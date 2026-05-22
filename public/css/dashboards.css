@@ -119,12 +119,39 @@
 
 }
 
+.dash-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.before-aba{
+  display: flex;
+  justify-content: start;
+  align-items: left;
+  width: 75%;
+  margin-left: 4%;
+  margin-top: 5%;
+
+}
+
+.abaDash{
+  height: 8vh;
+  width: 20vw;
+  left: 29px;
+  bottom: 0px;
+  background-color: #684b37;
+  border-radius: 15px 15px 0px 0;
+}
+
 .dash {
   width: 80%;
-  position: relative;
-  height: 80%;
+  height: 100%;
   background-color: #684b37;
-  height: 50vh;
+  height: 70%;
   overflow: auto;
 }
 
@@ -338,6 +365,7 @@ canvas {
 
 .janela {
   display: flex;
+  position: relative;
   height: 100vh;
   background-color: #FAF8ED;
   display: flex;

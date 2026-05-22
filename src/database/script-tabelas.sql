@@ -79,8 +79,9 @@ Calma, gentil e discreta, mas às vezes surpreende com um lado mais assertivo.',
 '/img/oscar.png'),
 ('Andy Bernard', 'Entre 30 e 40 anos. Carente, competitivo e emocional, busca aceitação e gosta de demonstrar talentos.',
 '/img/andy.png'),
-('Toby Flenderson', 'Entre 30 e 40 anos. Introvertido, passivo e paciente, frequentemente ignorado pelos colegas.',
-'/img/toby.png');
+('Meredith Palmer','Entre 40 e 50 anos. Descontraída, impulsiva e excêntrica, conhecida por seu comportamento imprevisível e engraçado.',
+'/img/quizMeredith.png');
+
 
 INSERT INTO pergunta (pergunta) VALUES 
 ('Em uma reunião de brainstorming para um novo projeto, qual é a sua postura principal?'),

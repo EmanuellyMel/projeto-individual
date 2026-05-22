@@ -35,21 +35,23 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  min-height: 6vh;
   width: 50%;
+  top: 0;
+  min-height: 6vh;
   background-color: #684b37;
   z-index: 99;
-  border-radius: 0px 0px 15px 15px;
+  border-radius: 0 0 15px 15px;
 }
 
 .header ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   height: 80%;
   width: 50%;
   background-color: #684b37;
   list-style: none;
+  gap: 10px;
 }
 
 .header ul li a{

@@ -10,7 +10,7 @@
   font-family: var(--font-principal);
 }
 
-.imgFundo{
+.imgFundo-cad{
   display: flex;
   justify-content: center;
   width: 100%;
@@ -27,36 +27,7 @@
   height: 100vh;
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  width: 50%;
-  top: 0;
-  min-height: 6vh;
-  background-color: #684b37;
-  z-index: 99;
-  border-radius: 0 0 15px 15px;
 
-}
-
-.header ul {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 80%;
-  width: 50%;
-  background-color: #684b37;
-  list-style: none;
-}
-
-.header ul li a{
-  font-size: 22px;
-  font-weight: 400px;
-  color: white;
-  text-decoration: none
-}
 .agora {
   font-weight: 800;
 }
@@ -76,9 +47,9 @@
   font-weight: 500;
 }
 
-.header h1 {
+/* .header h1 {
   margin: 0;
-}
+} */
 
 /* BANNER */
 

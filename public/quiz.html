@@ -11,6 +11,7 @@
     <script src="./js/sessao.js"></script>
 
     <link rel="stylesheet" href="./css/quiz.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -31,6 +32,9 @@
                 <li>
                     <a href="login.html">Login</a>
                 </li>
+                <li>
+                  <a href="dashboard/dashboard.html">Dashboard</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -42,7 +46,7 @@
     </div>
 
     <div id="fundo">
-        <div class="imgFundo">
+        <div class="imgFundo-quiz">
 
         </div>
     </div>
@@ -306,8 +310,10 @@
                 </fieldset>
             </form>
         </div>
+        <div class="container-enviar">
         <div class="enviar">
             <button onclick="validarFormulario()">Enviar</button>
+        </div>
         </div>
     </div>
 
@@ -376,11 +382,11 @@
 
         let idPerso = null
         // Sequência de IFs para achar o maior
-        if (pontosM > maiorPont) { maiorPont = pontosM; maiorNome = "Michael"}
-        if (pontosD > maiorPont) { maiorPont = pontosD; maiorNome = "Dwigth"}
-        if (pontosP > maiorPont) { maiorPont = pontosP; maiorNome = "Pam"}
-        if (pontosJ > maiorPont) { maiorPont = pontosJ; maiorNome = "Jim"}
-        if (pontosMer > maiorPont) { maiorPont = pontosMer; maiorNome = "Mer"}
+        if (pontosM > maiorPont) { maiorPont = pontosM; maiorNome = "Michael", idPerso = 2}
+        if (pontosD > maiorPont) { maiorPont = pontosD; maiorNome = "Dwigth", idPerso = 4}
+        if (pontosP > maiorPont) { maiorPont = pontosP; maiorNome = "Pam", idPeso = 3}
+        if (pontosJ > maiorPont) { maiorPont = pontosJ; maiorNome = "Jim", idPerso = 1}
+        if (pontosMer > maiorPont) { maiorPont = pontosMer; maiorNome = "Mer", idPerso = 14}
 
         // 4. Redirecionamento com ASPAS (Obrigatório para strings)
         if (maiorNome == "Michael") {
