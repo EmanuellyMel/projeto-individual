@@ -17,11 +17,16 @@ imagem VARCHAR(45)
 
 CREATE TABLE quiz (
 id_quiz INT PRIMARY KEY AUTO_INCREMENT,
+<<<<<<< HEAD
 pergunta1 VARCHAR(100),
 pergunta2 VARCHAR(100),
 pergunta3 VARCHAR(100),
 pergunta4 VARCHAR(100),
 pergunta5 VARCHAR(100)
+=======
+fk_usuario INT,
+CONSTRAINT ctFkUsuario FOREIGN KEY (fk_usuario) REFERENCES usuarios(id_usuario)
+>>>>>>> 0bf9449c234d1ea58f01595d3b2cc72dbbf137dc
 );
 
 CREATE TABLE resposta_usuario(
@@ -39,6 +44,22 @@ CONSTRAINT ctFkPergunta FOREIGN KEY (fk_quiz) REFERENCES quiz(id_quiz),
 CONSTRAINT ctFkPersonagem FOREIGN KEY (fk_personagem) REFERENCES personagem(id_personagem)
 );
 
+<<<<<<< HEAD
+=======
+CREATE TABLE questao (
+id_questao INT PRIMARY KEY AUTO_INCREMENT,
+escrita_questao VARCHAR(255),
+fk_quiz INT,
+CONSTRAINT ctFkQuiz FOREIGN KEY (fk_quiz) REFERENCES quiz(id_quiz)
+);
+>>>>>>> 0bf9449c234d1ea58f01595d3b2cc72dbbf137dc
+
+CREATE TABLE alternativa (
+id_alternativa INT PRIMARY KEY AUTO_INCREMENT,
+escrita_alternativa VARCHAR(255),
+fk_questao INT,
+CONSTRAINT ctFkQuestao FOREIGN KEY (fk_questao) REFERENCES questao(id_questao)
+);	
 
 INSERT INTO usuarios (nome, email, senha) VALUES 
 ('Emanuelly', 'emanuelly@email.com', 'Emanu123'),
@@ -79,3 +100,12 @@ cultura e assuntos intelectuais.',
 ('Meredith Palmer','Meredith Palmer é uma funcionária da área de relações com fornecedores da Dunder Mifflin, conhecida por sua personalidade exagerada, 
 irresponsável e descontraída. Meredith frequentemente apresenta comportamentos inadequados e excêntricos, mas também demonstra espontaneidade e sinceridade com os colegas.',
 '/img/quizMeredith.png');
+<<<<<<< HEAD
+=======
+
+INSERT INTO questao (fk_quiz, escrita_questao) VALUES
+(1, 'Qual é a sua forma preferida de interagir com os colegas durante as pausas?');
+
+INSERT INTO alternativa (fk_questao, escrita_alternativa) VALUES 
+(5, 'Procuro por qualquer distração que me afaste da monotonia das minhas obrigações.');
+>>>>>>> 0bf9449c234d1ea58f01595d3b2cc72dbbf137dc
