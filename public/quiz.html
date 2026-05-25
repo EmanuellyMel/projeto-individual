@@ -33,7 +33,7 @@
                     <a href="login.html">Login</a>
                 </li>
                 <li>
-                  <a href="dashboard/dashboard.html">Dashboard</a>
+                    <a href="dashboard/dashboard.html">Dashboard</a>
                 </li>
             </ul>
         </div>
@@ -70,7 +70,7 @@
                         <input type="radio" id="a" name="alt1" value="a">
                         <label for="a">
                             Tento manter o ambiente leve, pois acredito que a criatividade surge quando as pessoas estão
-                            se divertindo..
+                            se divertindo.
                         </label>
                     </div>
 
@@ -265,7 +265,7 @@
     </div>
 
     <div class="questao5">
-        <h2>Qual é a sua forma preferida de interagir com os colegas durante as pausas? </h2>
+        <h2>Qual é a sua forma preferida de interagir com os colegas durante as pausas?</h2>
 
         <div class="resposta">
             <form>
@@ -311,9 +311,9 @@
             </form>
         </div>
         <div class="container-enviar">
-        <div class="enviar">
-            <button onclick="validarFormulario()">Enviar</button>
-        </div>
+            <div class="enviar">
+                <button onclick="validarFormulario()">Enviar</button>
+            </div>
         </div>
     </div>
 
@@ -345,7 +345,7 @@
 
             for (let j = 0; j < radios.length; j++) {
                 if (radios[j].checked) {
-           
+
                     respostas[nomeAtual] = radios[j].id;
                     selecionado = true;
                     break;
@@ -361,7 +361,7 @@
         let chaves = Object.keys(respostas);
         for (let i = 0; i < chaves.length; i++) {
             let nomeDaChave = chaves[i];
-            let valorDaResposta = respostas[nomeDaChave]; 
+            let valorDaResposta = respostas[nomeDaChave];
 
             if (valorDaResposta == "a") {
                 pontosM++;
@@ -382,38 +382,30 @@
 
         let idPerso = null
         // Sequência de IFs para achar o maior
-        if (pontosM > maiorPont) { maiorPont = pontosM; maiorNome = "Michael", idPerso = 2}
-        if (pontosD > maiorPont) { maiorPont = pontosD; maiorNome = "Dwigth", idPerso = 4}
-        if (pontosP > maiorPont) { maiorPont = pontosP; maiorNome = "Pam", idPeso = 3}
-        if (pontosJ > maiorPont) { maiorPont = pontosJ; maiorNome = "Jim", idPerso = 1}
-        if (pontosMer > maiorPont) { maiorPont = pontosMer; maiorNome = "Mer", idPerso = 14}
+        if (pontosM > maiorPont) { maiorPont = pontosM; maiorNome = "Michael", idPerso = 2 }
+        if (pontosD > maiorPont) { maiorPont = pontosD; maiorNome = "Dwigth", idPerso = 4 }
+        if (pontosP > maiorPont) { maiorPont = pontosP; maiorNome = "Pam", idPerso = 3 }
+        if (pontosJ > maiorPont) { maiorPont = pontosJ; maiorNome = "Jim", idPerso = 1 }
+        if (pontosMer > maiorPont) { maiorPont = pontosMer; maiorNome = "Mer", idPerso = 9 }
 
         // 4. Redirecionamento com ASPAS (Obrigatório para strings)
-        if (maiorNome == "Michael") {
-            window.location.href = "./resultQMichael.html";
-        } else if (maiorNome == "Dwigth") {
-            window.location.href = "./resultQDwight.html";
-        } else if (maiorNome == "Pam") {
-            window.location.href = "./resultQPam.html";
-        } else if (maiorNome == "Jim") {
-            window.location.href = "./retsultQJim.html";
-        } else if (maiorNome == "Mer") {
-            window.location.href = "./resultQMeredith.html";
-        }
+
 
         /*======================================*/
         /* AQUI COMECA O CADASTRO DO QUIZ NO BD*/
         /*======================================*/
 
 
-        var idUsuarioVar = sessionStorage.getItem('ID_USUARIO')
+        var idUsuarioVar = sessionStorage.ID_USUARIO
         var idPersonagemVar = idPerso;
         var resposta1Var = respostas[chaves[0]]
         var resposta2Var = respostas[chaves[1]]
         var resposta3Var = respostas[chaves[2]]
         var resposta4Var = respostas[chaves[3]]
         var resposta5Var = respostas[chaves[4]]
-        
+
+        console.log(idUsuarioVar, "usuario", idPersonagemVar, "personagem", resposta1Var, "1 resposta", resposta2Var, "2 resposta", resposta3Var, "3 resposta", resposta4Var, "4 resposta", resposta5Var, "5 resposta")
+
         // Verificando se há algum campo em branco
         if (
             idUsuarioVar == "" ||
@@ -422,16 +414,16 @@
             resposta2Var == "" ||
             resposta3Var == "" ||
             resposta4Var == "" ||
-            resposta5Var == "" 
+            resposta5Var == ""
         ) {
-            cardErro.style.display = "block";
-            mensagem_erro.innerHTML =
-                "(Mensagem de erro para todos os campos em branco)";
+            // cardErro.style.display = "block";
+            // mensagem_erro.innerHTML =
+            //     "(Mensagem de erro para todos os campos em branco)";
 
-            finalizarAguardar();
-            return false;
+            // finalizarAguardar();
+            // return false;
         } else {
-            setInterval(sumirMensagem, 5000);
+
         }
 
         // Enviando o valor da nova input
@@ -457,18 +449,51 @@
                 console.log("resposta: ", resposta);
 
                 if (resposta.ok) {
-                    limparFormulario();
-                    finalizarAguardar();
+                    // limparFormulario();
+                    // finalizarAguardar();
+                    if (maiorNome == "Michael") {
+                        window.location.href = "./resultQMichael.html";
+                    } else if (maiorNome == "Dwigth") {
+                        window.location.href = "./resultQDwight.html";
+                    } else if (maiorNome == "Pam") {
+                        window.location.href = "./resultQPam.html";
+                    } else if (maiorNome == "Jim") {
+                        window.location.href = "./resultQJim.html";
+                    } else if (maiorNome == "Mer") {
+                        window.location.href = "./resultQMeredith.html";
+                    }
                 } else {
                     throw "Houve um erro ao tentar realizar o cadastro!";
                 }
             })
             .catch(function (resposta) {
                 console.log(`#ERRO: ${resposta}`);
-                finalizarAguardar();
+                // finalizarAguardar();
             });
 
         return false;
     }
+
+function buscarDadosQuiz(idQuiz){
+    fetch(`/quiz/${idParaBuscar}`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })
+        .then(function (resposta) {
+            if (resposta.ok) {
+                return resposta.json();
+            } else {
+                throw "Erro ao buscar";
+            }
+        })
+        .then(function (dados) {
+            console.log("Dados recebidos do banco:", dados);
+        })
+        .catch(function (erro) {
+            console.log("ERRO:", erro);
+        });
+        }
 
 </script>

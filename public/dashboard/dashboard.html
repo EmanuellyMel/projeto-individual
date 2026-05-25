@@ -1,72 +1,65 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <link
-      rel="shortcut icon"
-      href="../assets/icon/favicon2.ico"
-      type="image/x-icon"
-    />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Office</title>
 
-    <link rel="stylesheet" href="./../css/dashboards.css" />
-    <link rel="stylesheet" href="./../css/estilo.css" />
-    <script src="../js/sessao.js"></script>
-    <script src="./../js/alerta.js"></script>
+<head>
+  <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Office</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="./../css/dashboards.css" />
+  <link rel="stylesheet" href="./../css/estilo.css" />
+  <script src="../js/sessao.js"></script>
+  <script src="./../js/alerta.js"></script>
 
-    <!-- scripts do Chart.js - 2022-1 -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
 
-    <!--FONT AWESOME-->
-    <script
-      src="https://kit.fontawesome.com/9f7414eb10.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+  <!-- scripts do Chart.js - 2022-1 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <!-- <body onload=" atualizarFeed()"> -->
+  <!--FONT AWESOME-->
+  <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
+</head>
 
-  <body>
-    <div class="janela">
-      <div class="header-left">
-        <h1>AquaTech</h1>
+<!-- <body onload=" atualizarFeed()"> -->
 
-        <div class="hello">
-          <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-        </div>
-
-        <div class="btn-nav-white">
-          <a href="">
-            <h3>Personagens</h3>
-          </a>
-        </div>
-
-        <div class="btn-nav">
-          <h3>Gráficos</h3>
-        </div>
-
-        <div class="btn-nav-white">
-          <a href="./mural.html">
-            <h3>Mural</h3>
-          </a>
-        </div>
-
-        <div class="btn-logout" onclick="limparSessao()">
-          <h3>Sair</h3>
-        </div>
+<body>
+  <div class="janela">
+    <div class="header-left">
+      <div class="imgLogo">
+        <div class="logo"></div>
+      </div>
+      <div class="hello">
+        <p>Olá, <span id="b_usuario">usuário</span>!</p>
       </div>
 
+      <div class="btn-nav">
+        <a href="">
+          <p>Personagens</p>
+        </a>
+      </div>
+
+      <div class="btn-nav">
+        <p>Gráficos</p>
+      </div>
+
+      <div class="btn-nav" onclick="limparSessao()">
+        <p>Sair</p>
+        </a>
+      </div>  
+    </div>
+
+    <div class="imgFundo">
+       <div class="definicaoPerso">
+        <p class="titulo-pracheta">Personagem que os úsuarios mais se idenificam</p>
+        </div>
       <div class="dash-main">
-        <div class="before-aba">
-          <div class="abaDash"></div>
+        <div class="dash">
+          <canvas id="meuGRAFICO"></canvas>
         </div>
         <div class="dash">
           <canvas id="meuGRAFICO"></canvas>
@@ -77,7 +70,8 @@
     <div class="box-card">
       <div class="card"></div>
     </div>
-  </body>
+</body>
+
 </html>
 
 <script>

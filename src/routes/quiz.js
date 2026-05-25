@@ -8,5 +8,9 @@ router.post("/quizCadastrar", function (req, res) {
     quizController.quiz(req, res);
 })
 
+router.post("/:id", function (req, res) {
+    quizController.buscarPorId(req, res);
+})
+
 
 module.exports = router;

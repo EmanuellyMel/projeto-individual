@@ -1,8 +1,8 @@
-var quizModel = require("../models/quizModel");
+var quizCadastrar = require("../models/quizModel");
 
 function quiz(req, res) {
-  // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-  var id_usuario = req.body.idUsuarioServer;
+  // Crie uma variável que vá recuperar os valores do arquiv  o cadastro.html
+  var fk_usuarios = req.body.idUsuarioServer;
   var fk_personagem = req.body.idPersonagemServer;
   var resposta1 = req.body.resposta1Server;
   var resposta2 = req.body.resposta2Server;
@@ -11,7 +11,7 @@ function quiz(req, res) {
   var resposta5 = req.body.resposta5Server;
 
   // Faça as validações dos valores
-  if (id_usuario == undefined) {
+  if (fk_usuarios == undefined) {
     res.status(400).send("Seu id está undefined!");
   } else if (fk_personagem == undefined) {
     res.status(400).send("Seu personagem está undefined!");
@@ -27,9 +27,8 @@ function quiz(req, res) {
     res.status(400).send("Sua resposta está undefined!");
   } else {
     // Passe os valores como parâmetro e vá para o arquivo quizModel.js
-    quizModel
-      .quiz(
-        id_usuario,
+    quizCadastrar.quiz(
+        fk_usuarios,
         fk_personagem,
         resposta1,
         resposta2,
@@ -51,6 +50,23 @@ function quiz(req, res) {
   }
 }
 
+function buscarPorId(req, res){
+  var idQuiz =req.params.id;
+
+  return quizModel.buscarPorId(idQuiz)
+  .then(function (resultado) {
+        res.json(resultado);
+      })
+      .catch(function (erro) {
+        console.log(erro);
+        res.status(500).json(erro.sqlMessage);
+        });
+  
+     
+
+}
+
 module.exports = {
   quiz,
+  buscarPorId,
 };

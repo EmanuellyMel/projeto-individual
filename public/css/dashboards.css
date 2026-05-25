@@ -109,7 +109,7 @@
 }
 
 .div-buttons>* {
-  margin-left: 30px;
+  margin-left: 30px
 }
 
 /* pagina graficos */
@@ -119,38 +119,21 @@
 
 }
 
-.dash-main{
+.dash-main {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  width: 100%;
-}
-
-.before-aba{
-  display: flex;
-  justify-content: start;
-  align-items: left;
-  width: 75%;
-  margin-left: 4%;
-  margin-top: 5%;
-
-}
-
-.abaDash{
-  height: 8vh;
-  width: 20vw;
-  left: 29px;
-  bottom: 0px;
-  background-color: #684b37;
-  border-radius: 15px 15px 0px 0;
+  align-items: end;
+  flex-direction: row;
+  height: 70vh;
+  width: 60%;
+  gap: 20%;
+  margin-top: 8%;
 }
 
 .dash {
   width: 80%;
   height: 100%;
-  background-color: #684b37;
+  background-color: #e88f08;
   height: 70%;
   overflow: auto;
 }
@@ -383,16 +366,34 @@ canvas {
   gap: 20px;
   position: fixed;
   z-index: 999;
-  height: 10vh;
-  width: 80%;
+  height: 8vh;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  background-color: #FAF8ED;
-  border: solid 2px #BC9C80;
+  background-color: #684B37;
   box-shadow: 0px 4px 10px rgba(41, 41, 41, 0.125);
 }
+
+.imgLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 59px;
+}
+
+.logo {
+  min-height: 100%;
+  width: 100%;
+  background-image: url("../assets/imgs/logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 .dash-right {
   display: flex;
@@ -407,24 +408,26 @@ canvas {
 }
 
 .header-left h1 {
-  color: #684B37;
+  color: #ffffff;
   margin-left: 3%;
 
 }
 
 .hello {
-  width: 100%;
+  width: 30%;
   display: flex;
   justify-content: center;
 }
 
-.hello h3 {
-  color: #684B37;
+.hello p {
+  color: #ffffff;
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 22px;
+  font-weight: 400px;
+  color: white;
 }
 
-.hello h3 span {
+.hello p span {
   font-weight: 800;
 }
 
@@ -435,11 +438,12 @@ canvas {
   width: 20px;
   height: 10px;
   color: white;
-  border: solid 2px #684b37;
   background-color: #684b37;
   border-radius: 15px;
   text-align: center;
   padding: 2% 5%;
+  cursor: pointer;
+
 }
 
 .btn-nav-white {
@@ -460,10 +464,13 @@ canvas {
   margin: 0;
 }
 
-.btn-nav h3,
-.btn-logout h3 {
+.btn-nav p,
+.btn-logout p {
   margin: 0;
   padding: 0;
+  font-size: 22px;
+  font-weight: 400px;
+  color: white;
 }
 
 .btn-logout {
@@ -478,4 +485,36 @@ canvas {
   padding: 10px 15px;
   margin-bottom: 100px;
   cursor: pointer;
+}
+
+.imgFundo {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../assets/imgs/dash.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: relative; */
+}
+
+.definicaoPerso {
+  display: flex;
+  justify-content: center;
+  align-items: center;     /* Alinha verticalmente */
+  text-align: center;
+  width: 100%;             /* Agora ela ocupa 100% da largura da prancheta */
+  padding-top: 50px;       /* Empurra o texto um pouco para baixo do clipe de metal */
+}
+
+.titulo-pracheta {
+  text-align: center;
+  max-width: 380px;        /* Em vez de width %, limite o tamanho máximo para forçar a quebra de linha idêntica à foto */
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.3;
+  color: #684b37;
+  margin: 0;               /* Remove margens do <p> que tiram o texto do lugar */
 }
