@@ -25,17 +25,16 @@ var usuarioRouter = require("./src/routes/usuarios");
 var avisosRouter = require("./src/routes/avisos");
 // INICIO DA ROTA DO QUIZ
 var quizRouter = require("./src/routes/quiz")
-
 app.use("/quiz", quizRouter);
-// var medidasRouter = require("./src/routes/medidas");
-// var aquariosRouter = require("./src/routes/aquarios");
-// var empresasRouter = require("./src/routes/empresas");
+
+//INICIO DA ROTA DA DASH
+var dashRouter = require("./src/routes/dash")
+app.use("/dash", dashRouter);
+
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
 app.use("/avisos", avisosRouter);
-// app.use("/medidas", medidasRouter);
-// app.use("/aquarios", aquariosRouter);
-// app.use("/empresas", empresasRouter);
+
 
 
 app.listen(PORTA_APP, function () {
