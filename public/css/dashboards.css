@@ -543,6 +543,7 @@ canvas {
   color: #684b37;
   font-weight: bold;
   width: 100%;
+  font-size: 22px;
 }
 
 .telefone {
@@ -551,7 +552,7 @@ canvas {
   align-items: center;
   top: -10px;
   left: 100px;
-  height: 60%;
+  height: 54%;
   width: 100px;
   z-index: 99px;
   background-image: url("../assets/imgs/telefone.png");
@@ -566,9 +567,9 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 25px;
+  left: 0px;
   bottom: 0px;
-  height: 42%;
+  height: 45%;
   width: 25%;
   z-index: 99px;
   background-image: url("../assets/imgs/arquivos.png");
@@ -578,4 +579,20 @@ canvas {
   background-size: cover;
   position: absolute;
   transform: rotate(50px);
+}
+
+.caderno{
+  display: flex;
+  align-items: center;
+  height: 40%;
+  width: 20%;
+  bottom: 0;
+  right: 0px;
+  z-index: 99px;
+  background-image: url("../assets/imgs/caderno.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
 }

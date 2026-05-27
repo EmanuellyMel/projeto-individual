@@ -1,9 +1,8 @@
 var express = require("express");
 var router = express.Router();
-
 var dashController = require("../controllers/dashController");
 
-router.get("/total doadoa", function (req, res) {
+router.get("/totalDados", function (req, res) {
   dashController.kpiGeral(req, res);
 });
 
@@ -13,7 +12,7 @@ router.get("/dadosDash", function (req, res) {
   dashController.dashGeral(req, res);
 });
 
-router.get("/dadosDash", function (req, res) {
+router.get("/dadosDash/idUsuarioServer:", function (req, res) {
   dashController.dashEspc(req, res);
 });
 

@@ -22,7 +22,6 @@ app.use(cors());
 
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
-var avisosRouter = require("./src/routes/avisos");
 // INICIO DA ROTA DO QUIZ
 var quizRouter = require("./src/routes/quiz")
 app.use("/quiz", quizRouter);
@@ -33,7 +32,6 @@ app.use("/dash", dashRouter);
 
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
-app.use("/avisos", avisosRouter);
 
 
 

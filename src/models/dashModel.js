@@ -19,7 +19,7 @@ function dashGeral(dadosDash) {
     return database.executar(instrucaoSql);
 }
 
-function dashEspc(
+function dashEspc(  
   fk_usuarios,
 ) {
   console.log(
