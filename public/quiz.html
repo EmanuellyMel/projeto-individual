@@ -426,6 +426,8 @@
 
         }
 
+        // sessionStorage.PERSONAGEM_USER = idPersonagemVar;
+
         // Enviando o valor da nova input
         fetch("/quiz/quizCadastrar", {
             method: "POST",
@@ -473,6 +475,7 @@
 
         return false;
     }
+
 
 function buscarDadosQuiz(idQuiz){
     fetch(`/quiz/${idParaBuscar}`, {

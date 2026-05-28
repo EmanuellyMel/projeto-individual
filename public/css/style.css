@@ -43,8 +43,9 @@ html, body {
   width: 600px;
   min-height: 6vh;
   background-color: #684b37;
-  z-index: 99;
+  z-index: 99px;
   border-radius: 0 0 15px 15px;
+  position: fixed;
 }
 
 .header ul {

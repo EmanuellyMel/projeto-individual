@@ -408,7 +408,7 @@ canvas {
 }
 
 .hello {
-  width: 30%;
+  width: 20%;
   display: flex;
   justify-content: center;
 }
@@ -537,9 +537,28 @@ canvas {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 16%;
+  text-align: center;
 }
 
 .titulo p {
+  color: #684b37;
+  font-weight: bold;
+  width: 100%;
+  font-size: 22px;
+}
+
+.titulo-l{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+  width: 80%;
+  text-align: center;
+}
+
+.titulo-l p {
   color: #684b37;
   font-weight: bold;
   width: 100%;
@@ -584,10 +603,10 @@ canvas {
 .caderno{
   display: flex;
   align-items: center;
-  height: 40%;
+  height: 49%;
   width: 20%;
   bottom: 0;
-  right: 0px;
+  right: 0%;
   z-index: 99px;
   background-image: url("../assets/imgs/caderno.png");
   background-size: contain;
@@ -595,4 +614,79 @@ canvas {
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
+}
+
+.mp3{
+  display: flex;
+  align-items: center;
+  height: 12%;
+  width: 5%;
+  bottom: 0%;
+  right: 17%;
+  z-index: 99px;
+  background-image: url("../assets/imgs/mp3.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+.kpis{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  width: 20%;
+  position: absolute;
+  right: 1%;
+  bottom: 55%;
+  flex-direction: column;
+}
+
+.kpi1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #684b37;
+  border-radius: 20px;
+}
+
+.borda{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 95%;
+  border-radius: 20px;
+  border: solid 1px white;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.kpi1 p{
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  width: 100%;
+  font-size: 15px;
+  margin-bottom: 3%;
+}
+
+.nomePerso{
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  width: 100%;
+  font-size: 25px;
+}
+
+.numeroPerso{
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  width: 100%;
+  font-size: 25px;
 }

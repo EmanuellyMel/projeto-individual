@@ -34,7 +34,9 @@ function quiz(
 
 function buscarPorId(idQuiz) {
   console.log("ACESSEI O MODEL PARA BUSCAR PELO ID: ", idQuiz);
+
   var instrucaoSql = `SELECT * FROM resposta_usuario WHERE fk_quiz = ${idQuiz};`;
+  
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
 }

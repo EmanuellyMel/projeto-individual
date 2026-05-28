@@ -189,3 +189,28 @@
 
 </html>
 
+<script>
+    sessionPerso();
+   async function sessionPerso(){
+   await fetch(`/usuarios/personagem`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })
+        .then(function (resposta) {
+            if (resposta.ok) {
+                return resposta.json();
+            } else {
+                throw "Erro ao buscar";
+            }
+        })
+        .then(function (dados) {
+            console.log("Dados recebidos do banco:", dados);
+            sessionStorage.PERSONAGEM = JSON.stringify(dados)
+        })
+        .catch(function (erro) {
+            console.log("ERRO:", erro);
+        });
+        }
+</script>

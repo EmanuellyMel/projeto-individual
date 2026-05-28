@@ -61,9 +61,6 @@ function buscarPorId(req, res){
         console.log(erro);
         res.status(500).json(erro.sqlMessage);
         });
-  
-     
-
 }
 
 module.exports = {
