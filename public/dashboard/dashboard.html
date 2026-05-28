@@ -73,7 +73,7 @@
         <div class="prancheta-card">
           <div class="grafico">
             <div class="titulo-l">
-              <p>Quantidade de identificações por personegem</p>
+              <p>Quantidade de identificações por personagem</p>
             </div>
             <div class="dash-main">
               <div class="dash" id="dash">
@@ -164,12 +164,11 @@
       }
     })
     .then(function (dados) {
-      nome_personagem.innerHTML = dados[0].personagem
       console.log("dados recebidos: ", dados);
       console.log(dados[0].personagem)
       console.log("funcionou");
-
       numero_personagem.innerHTML = dados[0].quantidade_identificacoes
+      nome_personagem.innerHTML = dados[0].personagem
 
     })
 

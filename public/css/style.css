@@ -10,7 +10,8 @@
   font-family: var(--font-principal);
 }
 
-html, body {
+html,
+body {
   width: 100vw;
   overflow-x: hidden;
 }
@@ -59,12 +60,12 @@ html, body {
   gap: 10px;
 }
 
-.header ul li a{
+.header ul li a {
   font-size: 22px;
   font-weight: 400px;
   color: white;
   text-decoration: none;
-  
+
 }
 
 .tituloSinopse {
@@ -135,7 +136,7 @@ html, body {
   position: relative;
 }
 
-.personagens i{
+.personagens i {
   font-size: bold;
   font-size: 35px;
   color: #423023;
@@ -258,7 +259,7 @@ html, body {
   align-items: center;
 }
 
-.relacionamentos img  {
+.relacionamentos img {
   margin-top: 8%;
   border-radius: 0px 30px 30px 0px;
 }
@@ -286,11 +287,11 @@ html, body {
   flex-direction: row-reverse;
 }
 
-.Direita img{
+.Direita img {
   border-radius: 30px 0px 0px 30px;
 }
 
-.fechamentoDaPastaRelacionamentos{
+.fechamentoDaPastaRelacionamentos {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -299,14 +300,14 @@ html, body {
   background-color: #8D6555;
 }
 
-.curiosidadesTitulo{
+.curiosidadesTitulo {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 8vh;
   width: 20vw;
   left: 29px;
-  bottom:0 ;
+  bottom: 0;
   position: absolute;
   background-color: #B59A82;
   border-radius: 15px 15px 0px 0;
@@ -321,7 +322,7 @@ html, body {
   font-size: 22px;
 }
 
-.fechamentoCuriosidades{
+.fechamentoCuriosidades {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -330,14 +331,15 @@ html, body {
   background-color: #B59A82;
 }
 
-.topicos{
+.topicos {
   height: 100%;
   width: 100%;
   display: flex;
   background-color: #f7f2eb;
-  align-items: center;  
+  align-items: center;
 }
-.pontos{
+
+.pontos {
   height: 25px;
   width: 25px;
   background-color: #B59A82;
@@ -346,21 +348,21 @@ html, body {
   display: flex;
 }
 
-.topicos p{
+.topicos p {
   justify-content: space-around;
   margin: 5vh;
 }
 
-.Curiosidadesfinal{
+.Curiosidadesfinal {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 6vh;
   width: 100%;
-  background-color: #B59A82; 
+  background-color: #B59A82;
 }
 
-.abaFooter{
+.abaFooter {
   height: 100px;
   width: 20vw;
   height: 8vh;
@@ -370,7 +372,7 @@ html, body {
   border-radius: 15px 15px 0px 0;
 }
 
-.footer{
+.footer {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -379,7 +381,7 @@ html, body {
   background-color: #684B37;
 }
 
-.footer p{
+.footer p {
   display: flex;
   justify-content: center;
   align-items: center;
